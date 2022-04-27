@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v1
       
       - name: DCI component
-        uses: tonyskapunk/dci-component@56ac76d
+        uses: tonyskapunk/dci-component@56ac76d890f5b763aaa30e51c72cd95646aa5b35
         id: dci_component
         with:
           dciClientId: ${{ secrets.DCI_CLIENT_ID }}
