@@ -21,4 +21,4 @@ jobs:
           componentName: v1.2.3
           componentCanonicalName: "My container application"
           componentType: image
-      
+          componentData: '{"uno":null,"dos":["tres",{"sub":{"on":true,"off":false}}]}'
