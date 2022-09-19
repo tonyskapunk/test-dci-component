@@ -26,6 +26,6 @@ jobs:
           componentRelease: alpha
           componentTags: "tag:one,tag:two"
           componentUrl: "https://github.com/tonyskapunk/test-dci-component"
-          componentData: {"uno":null,"dos":["tres",{"sub":{"on":true,"off":false}}]}
+          componentData: '{"uno":null,"dos":["tres",{"sub":{"on":true,"off":false}}]}'
 
       - run: jq . <<<"${{ steps.my_cmp.outputs.components }}"
