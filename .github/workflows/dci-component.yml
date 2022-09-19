@@ -23,7 +23,7 @@ jobs:
           '
           componentName: "My container application"
           componentVersion: v1.2.4
-          componentRelease: alpha
+          componentRelease: dev
           componentTags: "tag:one,tag:two"
           componentUrl: "https://github.com/tonyskapunk/test-dci-component"
           componentData: '{"uno":null,"dos":["tres",{"sub":{"on":true,"off":false}}]}'
