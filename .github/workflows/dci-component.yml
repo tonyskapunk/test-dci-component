@@ -22,7 +22,7 @@ jobs:
           OCP-4.7
           '
           componentName: "My container application"
-          componentVersion: v1.2.4
+          componentVersion: v1.2.5
           componentRelease: dev
           componentTags: "tag:one,tag:two"
           componentUrl: "https://github.com/tonyskapunk/test-dci-component"
