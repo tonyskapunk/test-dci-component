@@ -28,4 +28,4 @@ jobs:
           componentUrl: "https://github.com/tonyskapunk/test-dci-component"
           componentData: '{"uno":null,"dos":["tres",{"sub":{"on":true,"off":false}}]}'
 
-      - run: jq . <<<"${{ steps.my_cmp.outputs.components }}"
+      - run: jq . <<<'${{ steps.my_cmp.outputs.components }}'
