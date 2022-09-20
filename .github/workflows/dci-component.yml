@@ -1,0 +1,34 @@
+name: DCI Component
+
+on:
+  pull_request:
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      
+      - name: DCI component
+        uses: dci-labs/dci-component@bc4c2d43aed7312a05e4bbe9580f2a9d0519c68c
+        id: my_cmp
+        with:
+          dciClientId: ${{ secrets.DCI_CLIENT_ID }}
+          dciApiSecret: ${{ secrets.DCI_API_SECRET }}
+          dciTopics: '
+          OCP-4.6,
+          OCP-4.7
+          '
+          componentName: "My container application"
+          componentVersion: v1.2.5
+          componentRelease: dev
+          componentTags: "tag:one,tag:two"
+          componentUrl: "https://github.com/tonyskapunk/test-dci-component"
+          componentData: '{"uno":null,"dos":["tres",{"sub":{"on":true,"off":false}}]}'
+
+      - run: |
+          cat <<EOF | jq . 
+          ${{ steps.my_cmp.outputs.components }}
+          EOF
